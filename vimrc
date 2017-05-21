@@ -1,5 +1,6 @@
 " Begin .vimrc
 
+syntax on
 set columns=160
 set wrapmargin=8
 set ruler
