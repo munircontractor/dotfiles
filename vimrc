@@ -37,7 +37,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 autocmd FileType markdown,rest let b:noStrip=1
 
 " Override settings for indent for C
-autocmd FileType c setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd FileType c setlocal shiftwidth=8 softtabstop=8 noexpandtab cindent
 
 " Smart home. Smart end not needed since trailing spaces are stripped anyways
 noremap <expr> <silent> <Home> col('.') == match(getline('.'), '\S') + 1 ? '0' : '^'
