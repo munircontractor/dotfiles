@@ -15,7 +15,7 @@ set softtabstop=4
 filetype plugin indent on
 
 " Set colorscheme
-colorscheme elflord
+colorscheme custom
 
 " Function to remove trailing whitespace from a line
 " but preserve cursor position after stripping
