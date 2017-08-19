@@ -1,6 +1,14 @@
 " Begin .vimrc
 
+if (&term == "iterm") || (&term == "putty")
+    set background=dark
+endif
+
 syntax on
+set nocompatible
+set backspace=2
+set viminfo='20,\"50
+set history=50
 set columns=160
 set wrapmargin=8
 set ruler
@@ -20,7 +28,7 @@ colorscheme custom
 " Function to remove trailing whitespace from a line
 " but preserve cursor position after stripping
 function! <SID>StripTrailingWhitespaces()
-    " Only strip is noStrip is not set
+    " Only strip if noStrip is not set
     if exists('b:noStrip')
         return
     endif
@@ -33,8 +41,8 @@ endfun
 
 " Auto strip trailing whitespace everytime file is written
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-" Do no strip trailing whitespace for markdown and rest files
-autocmd FileType markdown,rest let b:noStrip=1
+" Do no strip trailing whitespace for markdown files
+autocmd FileType markdown let b:noStrip=1
 
 " Override settings for indent for C
 autocmd FileType c setlocal shiftwidth=8 softtabstop=8 noexpandtab cindent
