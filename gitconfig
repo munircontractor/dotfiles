@@ -1,0 +1,6 @@
+[user]
+	name = Munir Contractor
+[core]
+	excludesfile = ~/.gitignore
+[push]
+	default = current
