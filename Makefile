@@ -10,12 +10,17 @@ gitfiles: .gitconfig .gitignore
 
 vimfiles: .vim .vimrc
 
+gvimfiles: vimfiles .gvimrc
+
 .vim:
 	mkdir -pv $(HOME)/.vim
 	cp -Rv vim/* $(HOME)/.vim/
 
 .vimrc:
 	cp -v vimrc $(HOME)/.vimrc
+
+.gvimrc:
+	cp -v gvimrc $(HOME)/.gvimrc
 
 .bashrc:
 	cp -v bashrc $(HOME)/.bashrc
