@@ -32,4 +32,4 @@ gvimfiles: vimfiles .gvimrc
 	cp -v gitconfig $(HOME)/.gitconfig
 
 .gitignore:
-	cp -v gitignore $(HOME)/.gitginore
+	cp -v gitignore $(HOME)/.gitignore
