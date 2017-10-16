@@ -12,6 +12,8 @@ if [ -d "$HOME/bin" ] ; then
     export PATH
 fi
 
+export HISTIGNORE="&:[bf]g:ls:logout:exit:[ \t]*"
+
 # Start XFCE desktop on login
 # Remove if not using XFCE
 if [ "$(tty)" = "/dev/tty1" -o "$(tty)" = "/dev/vc/1" ] ; then
