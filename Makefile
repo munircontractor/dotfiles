@@ -13,8 +13,8 @@ vimfiles: .vim .vimrc
 gvimfiles: vimfiles .gvimrc
 
 .vim:
-	mkdir -pv $(HOME)/.vim
-	cp -Rv vim/* $(HOME)/.vim/
+	mkdir -pv $(HOME)/.vim/colors
+	cp -v vim/colors/custom.vim $(HOME)/.vim/colors/
 
 .vimrc:
 	cp -v vimrc $(HOME)/.vimrc
