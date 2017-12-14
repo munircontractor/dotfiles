@@ -9,7 +9,6 @@ set nocompatible
 set backspace=2
 set viminfo='20,\"50
 set history=50
-set columns=160
 set wrapmargin=8
 set ruler
 set number
