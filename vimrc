@@ -43,6 +43,9 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 " Do no strip trailing whitespace for markdown files
 autocmd FileType markdown let b:noStrip=1
 
+" Set file type for JIRA and Confluence wiki
+autocmd BufNewFile,BufRead *.jira,*.confluence :set ft=confluencewiki
+
 " Override settings for indent for C
 autocmd FileType c setlocal shiftwidth=8 softtabstop=8 noexpandtab cindent
 
