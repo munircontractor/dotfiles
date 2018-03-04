@@ -47,6 +47,7 @@ autocmd FileType markdown let b:noStrip=1
 autocmd BufNewFile,BufRead *.jira,*.confluence :set ft=confluencewiki
 
 " Override settings for indent for C
+autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 autocmd FileType c setlocal shiftwidth=8 softtabstop=8 noexpandtab cindent
 
 " Smart home. Smart end not needed since trailing spaces are stripped anyways
