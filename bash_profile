@@ -12,7 +12,7 @@ if [ -d "$HOME/bin" ] ; then
     export PATH
 fi
 
-export HISTIGNORE="&:[bf]g:ls:logout:exit: *"
+export HISTIGNORE=$'&:[bf]g:ls:logout:exit:[ \t]*'
 
 # Start XFCE desktop on login
 # Remove if not using XFCE
