@@ -2,7 +2,7 @@
 
 .PHONY: all bashfiles gitfiles vimfiles
 
-all: bashfiles gitfiles vimfiles
+all: bashfiles gitfiles vimfiles bin
 
 bashfiles: .bashrc .bash_profile
 
@@ -11,6 +11,11 @@ gitfiles: .gitconfig .gitignore
 vimfiles: .vim .vimrc
 
 gvimfiles: vimfiles .gvimrc
+
+bin:
+	mkdir -pv $(HOME)/.local/bin
+	ln -sv .local/bin $(HOME)/bin
+	cp -v .local/bin/* $(HOME)/.local/bin/
 
 .vim:
 	mkdir -pv $(HOME)/.vim/{colors,syntax}
