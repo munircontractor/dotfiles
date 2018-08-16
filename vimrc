@@ -17,6 +17,7 @@ set cursorline
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+set nofoldenable
 
 " Use file based indentation
 filetype plugin indent on
